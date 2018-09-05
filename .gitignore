@@ -1,3 +1,25 @@
+# Don't keep images:
+*.png
+*.jpg
+*.jpeg
+
+# Other temp files:
+*.aux
+*.txt
+*.out
+*.blg
+*.gz
+*.toc
+*.lof
+*.lot
+*.bcf
+*.synctex.gz
+*.gz(busy)
+*.nav
+*.xml
+*.snm
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
