@@ -100,5 +100,4 @@ def auto_crop_image_bw(image, tol, N_allowable_misses):
   return removeable_rows, removeable_cols
 
 if __name__ == '__main__':
-  # print(getimage)
   main()

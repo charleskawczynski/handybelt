@@ -8,7 +8,7 @@ def append_to_filename_with_ext(filename, s, rename = False):
 
 def main():
   import argparse
-  import get_image as GI
+  from handybelt.getimage import getimage as GI
   import numpy as np
   from PIL import Image, ImageOps
   parser = argparse.ArgumentParser(description='Crops an image file, rename is optional.')
@@ -100,4 +100,5 @@ def auto_crop_image_bw(image, tol, N_allowable_misses):
   return removeable_rows, removeable_cols
 
 if __name__ == '__main__':
+  # print(getimage)
   main()
