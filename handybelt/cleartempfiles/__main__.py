@@ -1,6 +1,7 @@
+import argparse
 import os
 
-def main():
+def cleartempfiles():
   parser = argparse.ArgumentParser(description='Deletes frequently generated temporary files.')
   parser.add_argument('path',
     type=str,
@@ -19,4 +20,4 @@ def main():
             pass
 
 if __name__ == '__main__':
-  main()
+  cleartempfiles()

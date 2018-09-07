@@ -8,7 +8,7 @@ def append_to_filename_with_ext(filename, s, rename = False):
 
 def main():
   import argparse
-  from handybelt.getimage import getimage as GI
+  from handybelt.getimage.__main__ import get_image
   import numpy as np
   from PIL import Image, ImageOps
   parser = argparse.ArgumentParser(description='Crops an image file, rename is optional.')
@@ -28,7 +28,7 @@ def main():
     default=False,
     help='Rename original file')
   args = parser.parse_args()
-  image, grayscale = GI.get_image(args.filename)
+  image, grayscale = get_image(args.filename)
   image = auto_crop_image(image, args.tol, args.N_allowable_misses, grayscale)
   S = image.shape
 

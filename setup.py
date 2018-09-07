@@ -31,7 +31,7 @@ setuptools.setup(
     install_requires=[
           # 'markdown',
       ],
-    scripts=['bin/screenshot.py'],
+    # scripts=['bin/screenshot.py'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

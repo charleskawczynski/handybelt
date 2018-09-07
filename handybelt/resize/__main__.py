@@ -1,4 +1,4 @@
-import get_image as GI
+from handybelt.getimage.__main__ import get_image
 import scipy.misc
 import os
 import argparse
@@ -37,7 +37,7 @@ def main():
     help='Defines whether file is renamed or not')
   args = parser.parse_args()
 
-  image, grayscale = GI.get_image(args.filename)
+  image, grayscale = get_image(args.filename)
 
   S = image.shape
   NX, NY = S[1], S[0]
