@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import os
 from cleartempfiles.__main__ import cleartempfiles as CTF
 
 def main():
@@ -11,7 +12,9 @@ def main():
   args = parser.parse_args()
 
   subprocess.check_call(['xelatex', args.filename])
-  CTF()
+  path = os.path.dirname(args.filename)
+  path = '.' if path=='' else path
+  CTF(path)
 
 if __name__ == '__main__':
   main()
