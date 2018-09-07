@@ -1,3 +1,10 @@
+import numpy as np
+import numpy as np
+import argparse
+from getimage.__main__ import get_image
+import numpy as np
+from PIL import Image, ImageOps
+
 def append_to_filename_with_ext(filename, s, rename = False):
   if rename:
     f_new = filename
@@ -7,10 +14,6 @@ def append_to_filename_with_ext(filename, s, rename = False):
   return f_new
 
 def main():
-  import argparse
-  from handybelt.getimage.__main__ import get_image
-  import numpy as np
-  from PIL import Image, ImageOps
   parser = argparse.ArgumentParser(description='Crops an image file, rename is optional.')
   parser.add_argument('filename',
     type=str,
@@ -41,7 +44,6 @@ def main():
   image.save(f_new)
 
 def auto_crop_image(image, tol, N_allowable_misses, grayscale):
-  import numpy as np
   if grayscale:
     removeable_rows, removeable_cols = auto_crop_image_bw(image, tol, N_allowable_misses)
   else:
@@ -58,7 +60,6 @@ def auto_crop_image(image, tol, N_allowable_misses, grayscale):
   return image
 
 def auto_crop_image_bw(image, tol, N_allowable_misses):
-  import numpy as np
   S = image.shape
   removeable_cols = []
   N_misses = 0

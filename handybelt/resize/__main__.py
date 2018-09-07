@@ -1,4 +1,4 @@
-from handybelt.getimage.__main__ import get_image
+from getimage.__main__ import get_image
 import scipy.misc
 import os
 import argparse

@@ -1,8 +1,8 @@
 import argparse
 import subprocess
+from cleartempfiles.__main__ import cleartempfiles as CTF
 
 def main():
-  from handybelt.cleartempfiles.__main__ import cleartempfiles as CTF
   parser = argparse.ArgumentParser(description='Builds a Latex file.')
   parser.add_argument('filename',
     type=str,

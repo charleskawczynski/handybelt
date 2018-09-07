@@ -2,11 +2,11 @@ from PIL import Image,ImageOps
 import os
 import numpy as np
 import subprocess
+import clear_temp_files as CTF
+import build_latex_file as BLF
+import crop as C
 
 def main():
-  import clear_temp_files as CTF
-  import build_latex_file as BLF
-  import crop as C
   # CTF.main()
   # CTF.main()
   # file_name = 'MOONS'
