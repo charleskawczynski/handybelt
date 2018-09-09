@@ -25,6 +25,7 @@ def restricted_float(x):
 def resize(**kwargs):
   filename = kwargs['filename']
   res = kwargs['res']
+  rename = kwargs['rename']
 
   image, grayscale = getimage(filename)
 
