@@ -1,0 +1,75 @@
+\documentclass{beamer}
+
+\usetheme{UCLA_Charlie}
+
+\newcommand{\rootdir}{.}
+
+\newcommand{\PPTCITE}{\footnote}
+\newcommand{\figdir}{\rootdir/figs}
+\input{\rootdir/packages.tex}
+\addbibresource{\rootdir/bib/PD.bib}
+\addbibresource{\rootdir/bib/MHD.bib}
+\addbibresource{\rootdir/bib/fluids.bib}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\input{\rootdir/newcommands/variables}
+\input{\rootdir/newcommands/citations}
+\input{\rootdir/newcommands/equations}
+\input{\rootdir/newcommands/precision}
+\input{\rootdir/newcommands/position_and_alignment}
+\input{\rootdir/newcommands/figures}
+\input{\rootdir/newcommands/figure_formats_all_CL_included}
+\input{\rootdir/newcommands/figure_formats_all_CL_PPT_included}
+\input{\rootdir/newcommands/figure_formats_all_CL_not_included}
+\input{\rootdir/newcommands/acronyms}
+\input{\rootdir/newcommands/acronyms_define_new}
+\input{\rootdir/newcommands/footnotes}
+\input{\rootdir/newcommands/colors}
+
+\renewcommand*{\slideentry}[6]{} % Suppresses space occupied by mini-frames
+
+\title[An example PPT]{An example powerpoint presentation}
+
+\author[C. Kawczynski]{
+  \texorpdfstring{\CE
+  Charles Kawczynski, Ph.D.
+  \\
+  }{
+  Charles Kawczynski
+  }
+}
+
+% \institute[Universities of Somewhere and Elsewhere]{
+%   Department of Mechanical Engineering\\
+%   University of California, Los Angeles
+% }
+
+\date[Short Occasion]{2018}
+
+\subject{Talks}
+
+\begin{document}
+
+\section{Introduction}
+
+\begin{frame}{Example title}
+  \begin{itemize}
+    \item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Example title 2}
+  \MP{.39\TW}
+  \begin{itemize}
+    \item Bullet
+  \end{itemize}
+  \EMP
+  \MP{.6\TW}
+    \MP{\TW} \CE \vspace{-1em}
+    \IG[width=.99\TW]{\figdir/UCLA/logo_MAE.png} \\
+    \EMP \\
+  \EMP
+\end{frame}
+
+
+\end{document}

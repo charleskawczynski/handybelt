@@ -1,0 +1,145 @@
+% -------------------------------------------
+% Full FIGS (all captions/labels included):
+
+\newcommand{\oneFig}[3]{
+\FIG[!ht] \CE
+	\IG[width=0.6\TW]{#1} \caption{#2} \label{#3}
+\EFIG
+}
+
+\newcommand{\twoFigs}[6]{
+\FIG[!ht]\CE
+	\MP{0.48\TW} \CE
+		\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#1} \caption{#2} \label{#3}
+	\EMP
+	\hspace{1em}
+	\MP{0.48\TW} \CE
+		\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#4} \caption{#5} \label{#6}
+	\EMP
+	\hspace{1em}
+\EFIG
+}
+
+\newcommand{\twoSubFigs}[8]{
+\FIG[!ht]\CE
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#1} \caption{#2} \label{#3}
+		\ESFIG
+	\EMP
+	\hspace{.5em}
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#4} \caption{#5} \label{#6}
+		\ESFIG
+	\EMP
+	\vspace{1em}
+	\caption{#7} \label{#8}
+\EFIG
+}
+
+\newcommand{\twoSubFigsNoSubCap}[6]{
+\FIG[!ht]\CE
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#1} \caption{} \label{#2}
+		\ESFIG
+	\EMP
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#3} \caption{} \label{#4}
+		\ESFIG
+	\EMP
+	\vspace{1em}
+	\caption{#5} \label{#6}
+\EFIG
+}
+
+\newcommand{\threeSubFigsNoSubCap}[8]{
+\FIG[!ht]\CE
+	\MP{0.33\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#1} \caption{} \label{#2}
+		\ESFIG
+	\EMP
+	\MP{0.33\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#3} \caption{} \label{#4}
+		\ESFIG
+	\EMP
+	\MP{0.33\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#5} \caption{} \label{#6}
+		\ESFIG
+	\EMP \\
+	\caption{#7} \label{#8}
+\EFIG
+}
+
+\newcommand{\threeFigs}[9]{
+\oneFig
+{#1}
+{#2}
+{#3}
+\twoFigs
+{#4}
+{#5}
+{#6}
+{#7}
+{#8}
+{#9}
+}
+
+\newcommand{\threeFigsOld}[9]{
+\FIG[!ht]\CE
+	\MP{0.3\TW} \CE
+		\IG[width=.99\TW]{#1} \caption{#2} \label{#3}
+	\EMP \hspace{1em}
+	\MP{0.3\TW} \CE
+		\IG[width=.99\TW]{#4} \caption{#5} \label{#6}
+	\EMP \hspace{1em}
+	\MP{0.3\TW} \CE
+		\IG[width=.99\TW]{#7} \caption{#8} \label{#9}
+	\EMP
+\EFIG
+}
+
+\newcommand{\threeSubFigsNoSubCapSpecial}[8]{
+\FIG[!htp]
+	\noindent
+	\MP[b]{.5\TW}
+		\SFIG[b]{\TW}
+			\MP[b]{.85\TW}
+				\IG[width=\TW]{#1}
+			\EMP
+			\MP[b]{.1\TW}
+				\caption{} \label{#2}
+				\vspace{10mm}
+			\EMP
+		\ESFIG
+		\hfill
+		\SFIG[b]{\TW}
+			\MP[b]{.9\TW}
+				\hspace{-.76em}\IG[width=.99\TW]{#3}
+			\EMP
+			\hspace{-1.25em}
+			\MP[b]{.09\TW}
+				\caption{} \label{#4}
+				\vspace{10mm}
+			\EMP
+		\ESFIG
+	\EMP
+	\SFIG[b]{.5\TW}
+		\MP[b]{.8\TW}
+			\IG[width=\TW]{#5}
+		\EMP
+		\hfill
+		\MP[b]{.1\TW}
+			\caption{} \label{#6}
+			\vspace{26mm}
+		\EMP
+	\ESFIG
+	\vspace{.5em}
+	\caption{#7} \label{#8}
+\EFIG
+}

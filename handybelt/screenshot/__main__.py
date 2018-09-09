@@ -6,26 +6,7 @@ import pyautogui
 import scipy.misc
 import imageio
 
-def screenshot():
-  parser = argparse.ArgumentParser(description='Take a screen-shot and save a sub-window to file.')
-  parser.add_argument('--L',
-    default='C',
-    type=str,
-    help='Position of cropped screen-shot: [L, R, LU, LD, RU, RD]')
-  parser.add_argument('--filename',
-    default='screenshot.png',
-    type=str,
-    help='Size of cropped screen-shot, measured by percentage of screen from center')
-  parser.add_argument('--preview',
-    type=bool,
-    default=False,
-    help='Defines whether preview should be displayed or not')
-  parser.add_argument('--res',
-    type=float,
-    default=1,
-    help='Normalized resolution')
-  args = parser.parse_args()
-
+def screenshot(**kwargs):
   data = pyautogui.screenshot()
   data = np.asarray(data)
   S = data.shape
@@ -58,4 +39,23 @@ def screenshot():
     plt.show()
 
 if __name__ == '__main__':
-  screenshot()
+  parser = argparse.ArgumentParser(description='Take a screen-shot and save a sub-window to file.')
+  parser.add_argument('--L',
+    default='C',
+    type=str,
+    help='Position of cropped screen-shot: [L, R, LU, LD, RU, RD]')
+  parser.add_argument('--filename',
+    default='screenshot.png',
+    type=str,
+    help='Size of cropped screen-shot, measured by percentage of screen from center')
+  parser.add_argument('--preview',
+    type=bool,
+    default=False,
+    help='Defines whether preview should be displayed or not')
+  parser.add_argument('--res',
+    type=float,
+    default=1,
+    help='Normalized resolution')
+  args = parser.parse_args()
+  V = vars(args)
+  screenshot(**V)

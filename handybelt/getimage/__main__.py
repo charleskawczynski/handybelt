@@ -3,22 +3,6 @@ from PIL import Image
 import numpy as np
 import scipy
 
-def main():
-  parser = argparse.ArgumentParser(description='Returns a numpy array representation of an image.')
-  parser.add_argument('filename',
-    type=str,
-    help='Filename of image to crop')
-  parser.add_argument('--grayscale',
-    type=bool,
-    default=False,
-    help='Return a grayscale image')
-  args = parser.parse_args()
-  if args.grayscale:
-    image = get_image_bw(args.filename)
-  else:
-    image = get_image(args.filename)
-  return image
-
 def is_grayscale(file_name):
   image = Image.open(file_name)
   image.load()
@@ -31,25 +15,38 @@ def is_grayscale(file_name):
   else:
     ValueError('Uncaught shape in is_grayscale')
 
-def get_image_bw(file_name):
+def getimage_bw(file_name):
   image = Image.open(file_name)
   image = image.convert('L')
   image = np.asarray(image)
   return image
 
-def get_image_color(file_name):
+def getimage_color(file_name):
   image = Image.open(file_name)
   image.load()
   image = np.asarray(image)
   return image
 
-def get_image(file_name):
+def getimage(file_name):
   grayscale = is_grayscale(file_name)
-  if ():
-    image = get_image_bw(file_name)
+  if (grayscale):
+    image = getimage_bw(file_name)
   else:
-    image = get_image_color(file_name)
+    image = getimage_color(file_name)
   return image, grayscale
 
 if __name__ == '__main__':
-  main()
+  parser = argparse.ArgumentParser(description='Returns a numpy array representation of an image.')
+  parser.add_argument('filename',
+    type=str,
+    help='Filename of image to crop')
+  parser.add_argument('--grayscale',
+    type=bool,
+    default=False,
+    help='Return a grayscale image')
+  parser.add_argument('--rename',
+    type=bool,
+    default=False,
+    help='Rename original file')
+  args = parser.parse_args()
+  getimage(**vars(args))

@@ -1,0 +1,78 @@
+% -------------------------------------------
+% SUB FIGS (general caption/label NOT included):
+
+\newcommand{\sideBySideQuadSubFigNoCap}[8]{
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#1} \caption{} \label{#2}
+	\ESFIG
+\EMP
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#3} \caption{} \label{#4}
+	\ESFIG
+\EMP \\
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#5} \caption{} \label{#6}
+	\ESFIG
+\EMP
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#7} \caption{} \label{#8}
+	\ESFIG
+\EMP
+}
+
+\newcommand{\sideBySideQuadSubFig}[6]{
+\MP[c]{\TW}
+	\MP[c]{.49\TW}
+		\SFIG[H]{\TW} \CE
+			\IG[width=\TW]{#1} \caption{#2} \label{#3}
+		\ESFIG
+	\EMP
+	\MP[c]{.49\TW}
+		\SFIG[H]{\TW} \CE
+			\IG[width=\TW]{#4} \caption{#5} \label{#6}
+		\ESFIG
+	\EMP
+\EMP \\
+}
+
+\newcommand{\threeSideBySideSubFigs}[9]{
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#1} \caption{#2} \label{#3}
+	\ESFIG
+\EMP
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#4} \caption{#5} \label{#6}
+\ESFIG
+\EMP
+\\
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#7} \caption{#8} \label{#9}
+\ESFIG
+\EMP
+}
+
+\newcommand{\threeSideBySideSubFigsNoCap}[6]{
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#1} \caption{} \label{#2}
+	\ESFIG
+\EMP
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#3} \caption{} \label{#4}
+	\ESFIG
+\EMP \\
+\MP[c]{.49\TW}
+	\SFIG[H]{\TW} \CE
+		\IG[width=\TW]{#5} \caption{} \label{#6}
+	\ESFIG
+\EMP
+}
+

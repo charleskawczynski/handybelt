@@ -1,0 +1,58 @@
+\DeclareOptionBeamer{compress}{\beamer@compresstrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\useoutertheme[footline=authortitle]{miniframes}
+\useinnertheme{circles}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+
+\definecolor{beamer@blendedblue}{rgb}{0.137,0.466,0.741}
+\definecolor{ucla@PRIMARY_BLUE}{rgb}{0.1953,0.5156,0.7461}
+\definecolor{ucla@PRIMARY_GOLD}{rgb}{0.9961,0.9063,0.0000}
+\definecolor{ucla@SECONDARY_BLUE}{rgb}{0.2031,0.4805,0.6758}
+\definecolor{ucla@SECONDARY_DARK_BLUE}{rgb}{0.1172,0.2930,0.5273}
+\definecolor{ucla@TERTIARY_LIGHT_BLUE}{rgb}{0.0000,0.6406,0.8945}
+\definecolor{ucla@TERTIARY_LIGHT_YELLOW}{rgb}{0.9961,0.9961,0.0000}
+\definecolor{ucla@TERTIARY_LIGHT_GREEN}{rgb}{0.0000,0.9961,0.5273}
+\definecolor{ucla@TERTIARY_PINK}{rgb}{0.9961,0.0000,0.6445}
+\definecolor{ucla@TERTIARY_PURPLE}{rgb}{0.5078,0.2148,0.9961}
+\definecolor{ucla@TERTIARY_LIGHT_BLUE}{rgb}{0.0000,0.9961,0.9961}
+\definecolor{ucla@TERTIARY_GREY}{rgb}{0.3984,0.3984,0.3984}
+\definecolor{ucla@TERTIARY_DARK_YELLOW}{rgb}{0.9922,0.7305,0.2109}
+
+\setbeamercolor*{palette secondary}{use=structure,fg=black,bg=ucla@TERTIARY_DARK_YELLOW}
+%\setbeamercolor*{palette secondary}{use=structure,fg=black,bg=ucla@PRIMARY_GOLD}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=ucla@SECONDARY_DARK_BLUE}
+\setbeamercolor*{palette quaternary}{use=structure,fg=black,bg=ucla@PRIMARY_BLUE}
+
+% \setbeamercolor{structure}{fg=ucla@PRIMARY_BLUE}
+\setbeamercolor{structure}{fg=red}
+\setbeamercolor{titlelike}{parent=structure}
+\setbeamercolor{frametitle}{fg=ucla@PRIMARY_BLUE}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{item}{fg=black}
+
+% \setbeamercolor{lower separation line head}{bg=ucla@LIGHT_GREEN}
+% \setbeamercolor{lower separation line foot}{bg=ucla@LIGHT_BLUE}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted}{fg=ucla@TERTIARY_PINK}
+\setbeamercolor{example}{fg=black}
+\setbeamercolor*{shortauthor}{fg=white}
+
+% The order of these lines MATTER:
+\setbeamertemplate{navigation symbols}{} % hide navigation buttons
+\setbeamertemplate{mini frames}{} % Hide Miniframes for sub-sections:
+\setbeamertemplate{footline}{}    % Hides footer
+
+% Slide number in bottom right corner:
+\addtobeamertemplate{navigation symbols}{}{
+    \usebeamerfont{footline}
+    \usebeamercolor[fg]{alerted}
+    \hspace{1em}
+    \insertframenumber/\inserttotalframenumber
+}
+
+\mode
+<all>

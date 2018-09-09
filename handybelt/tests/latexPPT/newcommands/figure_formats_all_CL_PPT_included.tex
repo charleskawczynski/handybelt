@@ -1,0 +1,152 @@
+% -------------------------------------------
+% Full FIGS (all captions/labels included):
+
+\newcommand{\PPToneFig}[2]{
+\FIG[!ht] \CE
+	\IG[width=0.6\TW]{#1} \caption{#2}
+\EFIG
+}
+
+\newcommand{\PPTtwoFigs}[4]{
+\FIG[!ht]\CE
+	\MP{0.48\TW} \CE
+		\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#1} \caption{#2}
+	\EMP
+	\hspace{1em}
+	\MP{0.48\TW} \CE
+		\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#3} \caption{#4}
+	\EMP
+	\hspace{1em}
+\EFIG
+}
+
+\newcommand{\PPTtwoFigsOneCap}[4]{
+\MP{#1\TW} \CE
+\IG[width=\TW]{#2} \\
+\IG[width=\TW]{#3} \\
+\footnotesize{#4}
+\EMP
+}
+
+\newcommand{\PPTtwoSubFigs}[5]{
+\FIG[!ht]\CE
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#1} \caption{#2}
+		\ESFIG
+	\EMP
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW,height=0.3\TH,keepaspectratio]{#3} \caption{#4}
+		\ESFIG
+	\EMP
+	\vspace{1em}
+	\caption{#5}
+\EFIG
+}
+
+\newcommand{\PPTtwoSubFigsNoSubCap}[3]{
+\FIG[!ht]\CE
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#1} \caption{}
+		\ESFIG
+	\EMP
+	\MP{0.48\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#2} \caption{}
+		\ESFIG
+	\EMP
+	\vspace{1em}
+	\caption{#3}
+\EFIG
+}
+
+\newcommand{\PPTthreeSubFigsNoSubCap}[4]{
+\FIG[!ht]\CE
+	\MP{0.33\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#1} \caption{}
+		\ESFIG
+	\EMP
+	\MP{0.33\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#2} \caption{}
+		\ESFIG
+	\EMP
+	\MP{0.33\TW}
+		\SFIG[b]{\TW} \CE
+			\IG[width=.99\TW]{#3} \caption{}
+		\ESFIG
+	\EMP \\
+	\caption{#4}
+\EFIG
+}
+
+\newcommand{\PPTthreeFigs}[6]{
+\FIG[!ht]\CE
+	\MP{0.3\TW} \CE
+		\IG[width=.99\TW]{#1} \caption{#2}
+	\EMP \hspace{1em}
+	\MP{0.3\TW} \CE
+		\IG[width=.99\TW]{#3} \caption{#4}
+	\EMP \hspace{1em}
+	\MP{0.3\TW} \CE
+		\IG[width=.99\TW]{#5} \caption{#6}
+	\EMP
+\EFIG
+}
+
+\newcommand{\PPTfourFigs}[8]{
+\MP{0.245\TW} \CE
+	\IG[width=.99\TW]{#1} \\ \tiny{#2}
+\EMP
+\MP{0.245\TW} \CE
+	\IG[width=.99\TW]{#3} \\ \tiny{#4}
+\EMP
+\MP{0.245\TW} \CE
+	\IG[width=.99\TW]{#5} \\ \tiny{#6}
+\EMP
+\MP{0.245\TW} \CE
+	\IG[width=.99\TW]{#7} \\ \tiny{#8}
+\EMP
+}
+
+\newcommand{\PPTthreeSubFigsNoSubCapSpecial}[4]{
+\FIG[!htp]
+	\noindent
+	\MP[b]{.5\TW}
+		\SFIG[b]{\TW}
+			\MP[b]{.85\TW}
+				\IG[width=\TW]{#1}
+			\EMP
+			\MP[b]{.1\TW}
+				\caption{}
+				\vspace{10mm}
+			\EMP
+		\ESFIG
+		\hfill
+		\SFIG[b]{\TW}
+			\MP[b]{.85\TW}
+				\IG[width=.88\TW]{#2}
+			\EMP
+			\MP[b]{.1\TW}
+				\caption{}
+				\vspace{10mm}
+			\EMP
+		\ESFIG
+	\EMP
+	\SFIG[b]{.5\TW}
+		\MP[b]{.8\TW}
+			\IG[width=\TW]{#3}
+		\EMP
+		\hfill
+		\MP[b]{.1\TW}
+			\caption{}
+			\vspace{26mm}
+		\EMP
+	\ESFIG
+	\vspace{.5em}
+	\caption{#4}
+\EFIG
+}

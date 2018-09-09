@@ -1,4 +1,4 @@
-from getimage.__main__ import get_image
+from getimage.__main__ import getimage
 import scipy.misc
 import os
 import argparse
@@ -22,7 +22,21 @@ def restricted_float(x):
     raise argparse.ArgumentTypeError("{} not in range [{}, {}]".format(x, x_min, x_max))
   return x
 
-def main():
+def resize(**kwargs):
+  filename = kwargs['filename']
+  res = kwargs['res']
+
+  image, grayscale = getimage(filename)
+
+  S = image.shape
+  NX, NY = S[1], S[0]
+  NY_new = int(res*NY)
+  NX_new = int(res*NX)
+  image = scipy.misc.imresize(image, (NY_new, NX_new))
+  f_new = append_to_filename_with_ext(filename, '_resized', rename)
+  imageio.imwrite(f_new, image)
+
+if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='Resize image file.')
   parser.add_argument('filename',
     type=str,
@@ -36,16 +50,4 @@ def main():
     default=False,
     help='Defines whether file is renamed or not')
   args = parser.parse_args()
-
-  image, grayscale = get_image(args.filename)
-
-  S = image.shape
-  NX, NY = S[1], S[0]
-  NY_new = int(args.res*NY)
-  NX_new = int(args.res*NX)
-  image = scipy.misc.imresize(image, (NY_new, NX_new))
-  f_new = append_to_filename_with_ext(args.filename, '_resized', args.rename)
-  imageio.imwrite(f_new, image)
-
-if __name__ == '__main__':
-  main()
+  resize(**vars(args))
