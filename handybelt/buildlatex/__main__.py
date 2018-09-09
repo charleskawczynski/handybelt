@@ -8,7 +8,8 @@ def buildlatex(filename):
   path = os.path.dirname(filename)
   path = '.' if path=='' else path
   p, ext = os.path.splitext(filename)
-  p, f = p.split(os.sep)
+  temp = p.split(os.sep)
+  p, f = ['.',temp[0]] if len(temp)==1 else p.split(os.sep)
   f = f+ext
 
   s = 'xelatex -output-directory='+p+' -quiet '+f

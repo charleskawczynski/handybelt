@@ -57,5 +57,4 @@ if __name__ == '__main__':
     default=1,
     help='Normalized resolution')
   args = parser.parse_args()
-  V = vars(args)
-  screenshot(**V)
+  screenshot(**vars(args))
