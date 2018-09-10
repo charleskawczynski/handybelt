@@ -8,7 +8,9 @@ def main():
   subprocess.run('python -m crop screenshot_test.png')
   subprocess.run('python -m buildlatex main.tex')
   subprocess.run('python -m buildlatex latex/main.tex')
-  subprocess.run('python -m cleartempfiles latex') # already called inside buildlatex, but works
+
+  # cleartempfiles is called inside buildlatex, but works here too
+  subprocess.run('python -m cleartempfiles latex')
   subprocess.run('python -m buildlatex latexPPT/main.tex')
 
   subprocess.run('python -m pdf2img graph.pdf')

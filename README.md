@@ -32,3 +32,26 @@ python -m pip install handybelt
 python
 import project
 
+
+## Features
+  ✔ screenshot - Takes a screenshot and saves it to a file
+  ✔ transparentizeBG - Makes the background of an image transparent
+  ✔ crop - Auto-crop an image
+  ✔ buildlatex - Builds a latex file to generate a pdf (and deletes temp files)
+  ✔ cleartempfiles - Deletes temporary files made from latex build
+  ✔ resize - Resizes an image file
+  ✔ pdf2img - Generates image file from a PDF file
+
+## New features to add:
+  ☐ squarify - Makes an image square in shape by cropping then padding
+  ☐ grayscale - Makes an image gray-scale
+  ☐ newlatex - creates a new latex folder and file with typical packages
+  ☐ newlatexPPT - creates a new latex PPT folder and file with typical packages
+  ☐ pyfind - prints a list of files in all subdirectories (with given extension) that contains a given keyword
+
+Example use:
+python -m screenshot
+use
+python -m screenshot --help
+to see options
+
